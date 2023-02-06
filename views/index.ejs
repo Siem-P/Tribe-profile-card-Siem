@@ -1,8 +1,88 @@
-<%- include('./partials/head') %>
+<%# include('./partials/head') %>
 
-<article>
-  <h1>Hallo wereld!</h1>
-  <p>Alles werk! Laat dit visitekaartje in je browser aan een docent zien :D</p>
-</article>
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDND Visitekaartje</title>
+    <link rel="stylesheet" href="/speakers.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Begin Screen -->
+      <section class="home" id="home">
+        <h1>Siem Postmus</h1>
 
-<%- include('./partials/foot') %>
+        <div class="profile-pic">
+          <img
+            class="profile-picture"
+            src="/assets/profile-pic.jpeg"
+            alt="Foto van Siem op een festival"
+          />
+        </div>
+      </section>
+
+      <section class="content" id="content"></section>
+
+      <!-- Speaker Left -->
+      <div class="speaker-box speaker-box-left flex-center">
+        <div class="vent"></div>
+        <div class="speaker small flex-center circle1">
+          <div class="ring small flex-center">
+            <div class="interior small"></div>
+          </div>
+        </div>
+        <div class="speaker flex-center circle2">
+          <div class="ring flex-center">
+            <div class="interior"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TV screen -->
+      <div class="tv-screen-large" id="tv-screen">
+        <!-- Content on TV screen -->
+        <div class="onscreen-content">
+          <img
+            class="profile-picture-siem"
+            src="/assets/profile-pic.jpeg"
+            alt="profile-picture-siem"
+          />
+        </div>
+        <!-- Content on TV screen -->
+        <div class="onscreen-content next-slide">
+          <img
+            class="profile-picture-siem"
+            src="/assets/profile-pic.jpeg"
+            alt="profile-picture-siem"
+          />
+        </div>
+      </div>
+
+
+      
+
+      <!-- Speaker Rechts -->
+      <div class="speaker-box speaker-box-right flex-center">
+        <div class="vent"></div>
+        <div class="speaker small flex-center circle1">
+          <div class="ring small flex-center">
+            <div class="interior small"></div>
+          </div>
+        </div>
+        <div class="speaker flex-center circle2">
+          <div class="ring flex-center">
+            <div class="interior"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+
+
+<%# include('./partials/foot') %>
