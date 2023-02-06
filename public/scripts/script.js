@@ -1,4 +1,4 @@
-const api_url = "https://whois.fdnd.nl/api/v1/";
+const api_url = "https://whois.fdnd.nl/api/v1/members";
 
 async function getapi(url){
 
