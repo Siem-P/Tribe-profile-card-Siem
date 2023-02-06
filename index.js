@@ -17,6 +17,10 @@ app.get('/', function (req, res) {
   res.render('index')
 })
 
+app.get('/getAPIResponse', (req, res) => {
+  // API code will be here
+})
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
 

@@ -144,9 +144,6 @@ main h1 {
 
 /* Ipad Air Design */
 @media (min-width: 820px) and (max-width: 1024px) {
-  body {
-    /* background: green; */
-  }
 
   /* Hide the speakers */
   .speaker-box {
