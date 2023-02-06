@@ -52,7 +52,7 @@ main h1 {
   display: flex;
   width: 97%;
   height: 95%;
-  background-image: url(../images/windowsxp.jpeg);
+  background-image: url(/assets/windowsxp.jpeg);
   background-size: 582px 380px;
   position: relative;
   align-items: center;
@@ -63,7 +63,7 @@ main h1 {
   display: none;
   width: 97%;
   height: 95%;
-  background-image: url(../images/windowsxp.jpeg);
+  background-image: url(/assets/windowsxp.jpeg);
   background-size: 582px 380px;
   position: relative;
   align-items: center;
