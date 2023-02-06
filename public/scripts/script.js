@@ -1,12 +1,17 @@
 const api_url = "https://whois.fdnd.nl/api/v1/members";
 
-async function getapi(url){
+async function getAPI(url){
 
   const response = await fetch(url);
 
-  var data = await response.json();
+  let data = await response.json();
   console.log(data);
   
+  console.log(data.members[9]);
+  console.log(data.members[9].name);
   }
 
-getapi(api_url);
+getAPI(api_url);
+
+
+
