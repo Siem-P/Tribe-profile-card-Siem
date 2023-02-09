@@ -1,74 +1,29 @@
 <%- include('./partials/head') %>
 
-    <main>
-      <!-- Begin Screen -->
-      <section class="home" id="home">
-        <h1>Siem Postmus</h1>
-
-        <div class="profile-pic">
-          <img
-            class="profile-picture"
-            src="/assets/profile-pic.jpeg"
-            alt="Foto van Siem op een festival"
-          />
-        </div>
-      </section>
-
-      <section class="content" id="content"></section>
-
-      <!-- Speaker Left -->
-      <div class="speaker-box speaker-box-left flex-center">
-        <div class="vent"></div>
-        <div class="speaker small flex-center circle1">
-          <div class="ring small flex-center">
-            <div class="interior small"></div>
-          </div>
-        </div>
-        <div class="speaker flex-center circle2">
-          <div class="ring flex-center">
-            <div class="interior"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TV screen -->
-      <div class="tv-screen-large" id="tv-screen">
-        <!-- Content on TV screen -->
-        <div class="onscreen-content">
-          <img
-            class="profile-picture-siem"
-            src="/assets/profile-pic.jpeg"
-            alt="profile-picture-siem"
-          />
-        </div>
-        <!-- Content on TV screen -->
-        <div class="onscreen-content next-slide">
-          <img
-            class="profile-picture-siem"
-            src="/assets/profile-pic.jpeg"
-            alt="profile-picture-siem"
-          />
-        </div>
-      </div>
-
-
-      
-
-      <!-- Speaker Rechts -->
-      <div class="speaker-box speaker-box-right flex-center">
-        <div class="vent"></div>
-        <div class="speaker small flex-center circle1">
-          <div class="ring small flex-center">
-            <div class="interior small"></div>
-          </div>
-        </div>
-        <div class="speaker flex-center circle2">
-          <div class="ring flex-center">
-            <div class="interior"></div>
-          </div>
-        </div>
-      </div>
-    </main>
+<main>
+  <div class="scroll-indicator">
+    <span class="scroll-indicator-item"></span>
+    <span class="scroll-indicator-item"></span>
+    <span class="scroll-indicator-item"></span>
+    <span class="scroll-indicator-item"></span>
+  </div>
+  <section class="section--hero">
+    <section class="text--hero">
+      <h1>Siem Postmus</h1> 
+      <small> FDND'R</small>
+      <p class="biography"></p>
+    </section>
+    
+    <div class="hero--image-container">
+      <img src="/assets/profile-pic.jpeg" alt="Profielfoto van Siem">
+    </div>
+    <section class="socials">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </section>
+  </section>
+</main>
 
 
 <%- include('./partials/foot') %>

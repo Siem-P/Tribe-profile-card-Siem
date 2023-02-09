@@ -1,8 +1,15 @@
 // Importeer express uit de node_modules map
 import express from 'express'
 
+const memberId = "cldeo28o53rrk0bw5d6dsvol5";
+let content = ""
+await fetch(`https://whois.fdnd.nl/api/v1/member?id=${memberId}`)
+    .then((response) => response.json())
+    .then((data) => content = data.member)
 // Maak een nieuwe express app aan
 const app = express()
+
+
 
 // Stel ejs in als template engine en geef de 'views' map door
 app.set('view engine', 'ejs')
@@ -11,15 +18,11 @@ app.set('views', './views')
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
-// Maak een route voor de index
-app.get('/', function (req, res) {
-  // res.send('Hello World!')
-  res.render('index')
+app.get('/', async (req, res) => {
+	res.render('index', { content })
 })
 
-app.get('/getAPIResponse', (req, res) => {
-  // API code will be here
-})
+
 
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
