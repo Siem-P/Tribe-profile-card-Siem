@@ -1,5 +1,6 @@
 :root {
   --primary-color: #ADA0A6;
+  --primary-text-color: #fff;
 }
 
 /* CSS reset */
@@ -10,6 +11,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
 main {
   display: flex;
   background-color: var(--primary-color);
@@ -18,21 +23,72 @@ main {
 }
 
 .section--hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   flex-direction: column;
   /* justify-content: flex-end; */
   /* align-items: flex-end; */
 }
 
 .hero--image-container {
-  display: flex;
-  align-self: flex-end;
-  width: 80%;
+  overflow: hidden;
+  grid-column: 2/ span 4;
+  grid-row: 1 / span 5;
+  align-self: center;
+  /* width: 80%; */
 
 }
 .hero--image-container img {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   width: 100%;
+}
+
+.text--hero h1 {
+  width: 5em;
+  font-size: 2em;
+}
+
+.text--hero .biography {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.text--hero .scroll-down {
+  display: inline-block;
+  margin-top: 3em;
+}
+
+.text--hero {
+  position: relative;
+  z-index: 2;
+  grid-row: 3 / span 4;
+  grid-column: 2 / span 2;
+  color: var(--primary-text-color);
+  /* width: 8em; */
+  padding: 1em;
+}
+
+.socials {
+  z-index: 2;
+  /* align-self: flex; */
+  justify-self: flex-end;
+  grid-row: 4;
+  /* grid-column: 4 / span 5; */
+}
+
+.socials ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.socials ul li {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: aqua;
 }
