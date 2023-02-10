@@ -1,15 +1,19 @@
 // Importeer express uit de node_modules map
 import express from 'express'
 
+let likes = 0;
+
 const memberId = "cldeo28o53rrk0bw5d6dsvol5";
 let content = ""
 await fetch(`https://whois.fdnd.nl/api/v1/member?id=${memberId}`)
     .then((response) => response.json())
     .then((data) => content = data.member)
+
+
+
+
 // Maak een nieuwe express app aan
 const app = express()
-
-
 
 // Stel ejs in als template engine en geef de 'views' map door
 app.set('view engine', 'ejs')
@@ -19,9 +23,13 @@ app.set('views', './views')
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-	res.render('index', { content })
+	res.render('index', { content, likes })
 })
 
+app.post('/like', function(req, res) {
+  likes++;
+  res.redirect(303, '/');
+})
 
 
 // Stel het poortnummer in waar express op gaat luisteren

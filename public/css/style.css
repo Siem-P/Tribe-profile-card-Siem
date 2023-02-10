@@ -16,10 +16,10 @@ li {
 }
 
 main {
-  display: flex;
+  /* display: flex; */
   background-color: var(--primary-color);
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .section--hero {
@@ -59,8 +59,9 @@ main {
 }
 
 .text--hero .scroll-down {
-  display: inline-block;
-  margin-top: 3em;
+  /* display: inline-block; */
+  grid-row: 5;
+  /* margin-top: 3em; */
 }
 
 .text--hero {
@@ -71,12 +72,13 @@ main {
   color: var(--primary-text-color);
   /* width: 8em; */
   padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .socials {
   z-index: 2;
   /* align-self: flex; */
-  justify-self: flex-end;
+  /* justify-self: flex-end; */
   grid-row: 4;
   /* grid-column: 4 / span 5; */
 }
